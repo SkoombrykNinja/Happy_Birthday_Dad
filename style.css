@@ -1,0 +1,118 @@
+body {
+    background-color: rgb(86, 148, 189);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1 {
+    color: #ff69b4;
+    text-align: center;
+    font-family: 'Comic Sans MS';
+}
+
+/* Greeting - the div at the top of the page*/
+#Greeting {
+    position: absolute;
+    top: 12%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    transition: 0.3s ease;
+    padding: 0px;
+    border-radius: 60px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    left: 50%;
+    width: 80%;
+    text-align: center;
+
+    background-color: whitesmoke;
+}
+
+#Greeting:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+/* Make the cake spin on top of the page*/
+#cake {
+    cursor: pointer;
+    user-select: none;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 100px;
+    animation: cake-spin 8s linear infinite;
+} 
+
+@keyframes cake-spin {
+    from {transform: rotate(0deg) ;}
+    20% {transform: translate(-50%, -50%) rotate(180deg) ;}
+    40% {transform: translate(-100%, -100%) rotate(360deg) scale(0.8);}
+    40% {transform: translate(-100%, -100%) rotate(0deg) scale(0.8);}
+    60% {transform: translate(-150%, 0%) rotate(180deg) scale(0.6);}
+    80% {transform: translate(-50%, 0%) rotate(360deg) scale(0.8);}
+    to {transform:  rotate(360deg) scale(1);}
+}
+
+#letter {
+    position: absolute;
+    top: 28%;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 600px;
+    font-family: Arial, sans-serif;
+    line-height: 2;
+    width: 80%;
+}
+
+#letter p {
+    background-color: whitesmoke;
+    padding: 10px 20px;
+    margin: 5px 0;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+#letter p:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+}
+
+#yourage {
+    user-select: none;
+    display: flex;
+    position: absolute;
+    gap: 10px;
+    top: 67%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: Arial, sans-serif;
+    font-size: 36px;
+    color: #ff69b4;
+
+    white-space: nowrap;
+    align-items: baseline;
+}
+
+#age {
+    font-size: 72px;
+    font-weight: bold;
+    font-family: 'Georgia', serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    transform: translateY(5px);
+}
+
+#factorial38 {
+    font-size: 24px;
+    color: #ff69b4;
+    font-family: Arial, sans-serif;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50px);
+    max-width: 90vw;       /* fits inside phone width */
+    white-space: normal;   /* allows wrapping */
+    overflow-wrap: break-word; /* breaks long numbers nicely */
+    text-align: center;
+}
